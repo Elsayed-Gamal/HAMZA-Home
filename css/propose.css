@@ -1,0 +1,135 @@
+/* Start header */
+
+.header {
+  height: 415px;
+  background: none;
+}
+
+.header .search {
+  height: 315px;
+  position: relative;
+}
+
+.header .search .overlay {
+  background-color: #495930;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 85%;
+  z-index: 1;
+}
+
+.header .search .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 315px;
+}
+
+.header .search .background img {
+  width: 100%;
+  height: 315px;
+}
+
+.header .search .search-info {
+  position: relative;
+  z-index: 2;
+  color: #e2ebd4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.header .search .search-info .left h3 {
+  font-size: 22px;
+  position: relative;
+}
+
+.header .search .search-info .left p {
+  font-size: 14px;
+  margin-top: -10px;
+  text-transform: uppercase;
+}
+
+.header .search .search-info .left h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 1px;
+  background-color: #e2ebd4;
+}
+
+.header .search .search-info .right {
+  width: 50%;
+  height: 40px;
+  background-color: #e2ebd4;
+  margin-top: 10px;
+  display: flex;
+}
+
+.header .search .search-info .right > div {
+  position: relative;
+  width: 25%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.header .search .search-info .right > div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: #495930;
+  width: 1px;
+  height: 70%;
+  transform: translateY(-50%);
+}
+
+.header .search .search-info .right > div a {
+  text-decoration: none;
+  color: #495930;
+}
+
+.header .search .search-info .right .all-search {
+  background-color: #495930;
+  color: #e2ebd4;
+}
+
+.header .search .search-info .right div a img {
+  margin-left: 5px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+
+@media (max-width: 992px) {
+  .header .search .search-info {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .header .search .search-info .right {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .search .search-info .right {
+    width: 100%;
+  }
+
+  .header .search .search-info .right > div {
+    font-size: 10px;
+  }
+}
+
+/* End header */
